@@ -1,82 +1,25 @@
 <!DOCTYPE html>
-<head>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <title>RPG</title>
-</head>
-<body class="bg">
-  <div class="container">
-  
-    <div id="intro">
-      <h1> Welcome to this RPG Game</h1>
-      
-      <h3> Pick a character to start</h3>
-      <form id="pickCharacter">
-        <select id="character">
-          <option value="warrior">Warrior</option> 
-          <option value="wizard">Wizard</option>
-        </select>
-        <button type="submit" class="btn btn-success">Start game!</button>
-      </form>
+<html>
+  <head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Hungry Bear</title>
+  </head>
+  <body>
+    <form id="hungryBear">
+      <label for="name">
+      <input id="name" type="text" name="name">
+      <button type="submit" name="button">Play</button>
+    </form>
+    <h1>Bear name: <span id="bearName"></span></h1>
+
+    <div class="game">
+
+      <h2>Food Level: <span id="foodLevel"></span></h2>
+      <br>
+      <h1><span id="eaten"></span></h1>
+      <button id="feed" type="button" name="button">Feed the bear!</button>
+
     </div>
-    <div id="warriorchar">
-      <h2 id="charactertype"></h2>
-      <img src="https://vignette.wikia.nocookie.net/streetfighter/images/0/04/Alex.png/revision/latest?cb=20140127024802&path-prefix=pt-br">
-      <h4 id="health"></h4>
-      <h4 id="level"></h4>
-      <h4 id="strength"></h4>
-      <h4 id="money"></h4>
-      <h4 id="items"></h4>
-  
-      <button type="button" class="btn btn-primary" id="fight">Fight monsters</button>
-      <button type="button" class="btn btn-success" id="useArmor">Equip Armor</button>
-      <button type="button" class="btn btn-warning" id="useSword">Equip Sword</button>
-      <button type="button" class="btn btn-danger" id="usePotion">Use Potion</button>
-      <br><br>
-      <button type="button" class="btn btn-success" id="removeArmor">Remove Armor</button>
-      <button type="button" class="btn btn-warning" id="removeSword">Remove Sword</button>
-      <br><br>
-      <div id="shop1">
-        <h2>SHOP FOR ITEMS HERE</h2>
-        <img src='http://www.sclance.com/pngs/armor-png/armor_png_56524.png'>
-        <button type="button" class="btn btn-primary" id="shopArmor">Armor</button>
-        <button type="button" class="btn btn-primary" id="shopSword">Wand</button>
-        <button type="button" class="btn btn-primary" id="shopPotion">Health Potion</button> <br/>
-      </div>
-        
-    </div>
-    <div id="wizardchar">
-      <h2 id="charactertype2"></h2>
-      <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3dc84c53-b738-457a-b4ad-6cab5032d74f/dbt3zag-123ec36e-d82b-4081-b2fa-bd829cb21cec.png/v1/fill/w_1020,h_783,strp/female_wizard_render_by_diablo7707_dbt3zag-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Nzg2IiwicGF0aCI6IlwvZlwvM2RjODRjNTMtYjczOC00NTdhLWI0YWQtNmNhYjUwMzJkNzRmXC9kYnQzemFnLTEyM2VjMzZlLWQ4MmItNDA4MS1iMmZhLWJkODI5Y2IyMWNlYy5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.h2pMOLg-zQ3uT-vwp8WTiKnj5P2WfLCOAz-jDG7wjcA">
-      <h4 id="health2"></h4>
-      <h4 id="level2"></h4>
-      <h4 id="intelligence"></h4>
-      <h4 id="money2"></h4>
-      <h4 id="items2"></h4>
-  
-      <button type="button" class="btn btn-primary" id="fight2">Fight monsters</button>
-      <button type="button" class="btn btn-success" id="useArmor2">Equip Armor</button>
-      <button type="button" class="btn btn-warning" id="useWand">Equip Wand</button>
-      <button type="button" class="btn btn-danger" id="usePotion2">Use Potion</button>
-      <br><br>
-      <button type="button" class="btn btn-success" id="removeArmor2">Remove Armor</button>
-      <button type="button" class="btn btn-warning" id="removeWand">Remove Wand</button>
-      <br><br>
-      <div id="shop2">
-        <h2>SHOP FOR ITEMS HERE</h2>
-        <button type="button" class="btn btn-primary" id="shopArmor2"><img src='http://www.sclance.com/pngs/armor-png/armor_png_56524.png'> Armor</button>
-        <button type="button" class="btn btn-primary" id="shopWand"><img src='http://www.stickpng.com/assets/images/5a8dd4d6b15d5c051b368ffe.png'>   Wand</button>
-        <button type="button" class="btn btn-primary" id="shopPotion2"><img src='https://www.freeiconspng.com/uploads/potion-icon-png-27.png'> Health Potion</button> <br/>
-        
-        
-        
-      </div>  
-    </div>
-    <div id="gameOver">
-      <h2>Sorry your character died..</h2>
-      <button type="button" class="btn btn-primary" id="revive">Revive your character</button>
-      <button type="button" class="btn btn-warning" id="menu">Back to main menu</button>
-    </div>
-  </div>
-</body>
+  </body>
 </html>

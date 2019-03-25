@@ -1,5 +1,5 @@
 {
-  "name": "rpg",
+  "name": "Did-you-get-eaten",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -30,7 +30,7 @@
     "eslint-loader": "^2.0.0",
     "html-webpack-plugin": "^3.0.6",
     "jasmine": "^3.1.0",
-    "jasmine-core": "^2.99.1",
+    "jasmine-core": "^2.99.0",
     "karma": "^2.0.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-cli": "^1.0.1",
